@@ -194,15 +194,16 @@ systemctl start sockd.service
 }
 
 connect() {
-	IPV4=$(curl -4 ip.sb)
-	IPV6=$(curl -6 ip.sb)
-	echo "IP: $IP"
+	IPv4=$(curl -4 ip.sb)
+	IPv6=$(curl -6 ip.sb)
+	echo "IPv4: $IPv4"
+	echo "IPv6: $IPv6"
 	echo "端口：$port"
 	echo "账户：$user"
 	echo "密码：$passwd"
 	echo "
-IPv4: $IPV4
-IPv6: $IPV6
+IPv4: $IPv4
+IPv6: $IPv6
 端口：$port
 账户：$user
 密码：$passwd
