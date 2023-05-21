@@ -102,8 +102,8 @@ port_exist_check() {
     else
         echo -e "${Error} ${RedBG} 检测到 ${port} 端口被占用，以下为 ${port} 端口占用信息 ${Font}"
         lsof -i:"${port}"
-        echo -e "${OK} ${GreenBG} 5s 后将尝试自动 kill 占用进程 ${Font}"
-        sleep 5
+        echo -e "${OK} ${GreenBG} 3s 后将尝试自动 kill 占用进程 ${Font}"
+        sleep 3
         lsof -i:"${port}" | awk '{print $2}' | grep -v "PID" | xargs kill -9
         echo -e "${OK} ${GreenBG} kill 完成 ${Font}"
         sleep 1
@@ -255,18 +255,18 @@ menu() {
     echo -e "—————————————— 安装向导 ——————————————"
     echo -e "${Green}   ${Font}"
 
-    echo -e "${Red}直接按1回车回车回车回车即可${Font}"
+    echo -e "${Red}   ${Font}"
 
     echo -e "${Red}  ${Font}"
     echo -e "${Green}1.${Font}  安装ss5"
-    echo -e "${Green}2.${Font}  停止ss5"
-    echo -e "${Green}3.${Font}  删除ss5"
-    echo -e "${Green}4.${Font}  更改端口账户密码"
-    echo -e "${Green}99.${Font}  退出 \n"
+    echo -e "${Blue}2.${Font}  停止ss5"
+    echo -e "${Red}3.${Font}  删除ss5"
+    echo -e "${Yellow}4.${Font}  更改端口账户密码"
+    echo -e "${Pink}99.${Font} 退出 \n"
 
 
 
-    read -rp "请输入数字1然后按回车：" menu_num
+    read -rp "请输入数字1然后直接连续按四次回车即可：" menu_num
     case $menu_num in
     1)
         install
