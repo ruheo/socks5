@@ -246,16 +246,16 @@ update_ss5() {
 
 
 menu() {
-    echo -e "\t ss5 安装管理脚本 "
-    echo -e "\t---authored by ---"
+    echo -e "\t ss5 一键安装脚本 "
+    echo -e "\t---authored by Magic Lamp---"
     echo -e "\t"
     echo -e "\tSystem Request:Debian 9+/Ubuntu 20.04+/Centos 7+"
     echo -e "\t\n"
 
     echo -e "—————————————— 安装向导 ——————————————"
-    echo -e "${Green}  ${Font}"
+    echo -e "${Green}   ${Font}"
 
-    echo -e "${Red}   ${Font}"
+    echo -e "${Red}直接按1回车回车回车回车即可${Font}"
 
     echo -e "${Red}  ${Font}"
     echo -e "${Green}1.${Font}  安装ss5"
