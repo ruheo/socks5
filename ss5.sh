@@ -247,6 +247,7 @@ update_ss5() {
 
 menu() {
     echo -e "\t Socks5 一键安装脚本 "
+    echo -e "\t"
     echo -e "\t---authored by Magic Lamp---"
     echo -e "\t"
     echo -e "\tSystem Request:Debian 9+/Ubuntu 20.04+/Centos 7+"
@@ -258,14 +259,15 @@ menu() {
     echo -e "${Red}   ${Font}"
 
     echo -e "${Red}  ${Font}"
-    echo -e "${Green}1.${Font}  安装"
-    echo -e "${Green}2.${Font}  停止"
-    echo -e "${Green}3.${Font}  卸载"
+    echo -e "${Green}1.${Font}  安装Socks5"
+    echo -e "${Green}2.${Font}  停止Socks5"
+    echo -e "${Green}3.${Font}  删除Socks5"
     echo -e "${Green}8.${Font}  重设端口账户密码"
     echo -e "${Green}9.${Font}  退出 \n"
 
-
-
+    echo -e "${Red}   ${Font}"
+    
+    echo -e "${Green}   ${Font}"
     read -rp "请输入数字1然后直接连续按四次回车即可：" menu_num
     case $menu_num in
     1)
