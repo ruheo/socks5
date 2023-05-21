@@ -259,10 +259,10 @@ menu() {
 
     echo -e "${Red}  ${Font}"
     echo -e "${Green}1.${Font}  安装ss5"
-    echo -e "${Blue}2.${Font}  停止ss5"
+    echo -e "${Red}2.${Font}  停止ss5"
     echo -e "${Red}3.${Font}  删除ss5"
-    echo -e "${Yellow}4.${Font}  更改端口账户密码"
-    echo -e "${Pink}99.${Font} 退出 \n"
+    echo -e "${Red}8.${Font}  更改端口账户密码"
+    echo -e "${Green}9.${Font}  退出 \n"
 
 
 
@@ -278,10 +278,10 @@ menu() {
     3)
         del_ss5
         ;;
-    4)
+    8)
         update_ss5
         ;;
-    99)
+    9)
         exit 0
         ;;
     *)
