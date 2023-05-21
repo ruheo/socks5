@@ -105,7 +105,7 @@ port_exist_check() {
         echo -e "${OK} ${GreenBG} 3s 后将尝试自动 kill 占用进程 ${Font}"
         sleep 3
         lsof -i:"${port}" | awk '{print $2}' | grep -v "PID" | xargs kill -9
-        echo -e "${OK} ${GreenBG} kill 完成 ${Font}"
+        echo -e "${OK} ${GreenBG} kill 完成，请继续操作 ${Font}"
         sleep 1
     fi
 }
@@ -246,7 +246,7 @@ update_ss5() {
 
 
 menu() {
-    echo -e "\t ss5 一键安装脚本 "
+    echo -e "\t Socks5 一键安装脚本 "
     echo -e "\t---authored by Magic Lamp---"
     echo -e "\t"
     echo -e "\tSystem Request:Debian 9+/Ubuntu 20.04+/Centos 7+"
@@ -258,10 +258,10 @@ menu() {
     echo -e "${Red}   ${Font}"
 
     echo -e "${Red}  ${Font}"
-    echo -e "${Green}1.${Font}  安装ss5"
-    echo -e "${Red}2.${Font}  停止ss5"
-    echo -e "${Red}3.${Font}  删除ss5"
-    echo -e "${Red}8.${Font}  更改端口账户密码"
+    echo -e "${Green}1.${Font}  安装"
+    echo -e "${Green}2.${Font}  停止"
+    echo -e "${Green}3.${Font}  卸载"
+    echo -e "${Green}8.${Font}  重设端口账户密码"
     echo -e "${Green}9.${Font}  退出 \n"
 
 
